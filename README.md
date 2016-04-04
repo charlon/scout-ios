@@ -15,4 +15,4 @@ $ cd scout-ios-turbolinks
 $ pod install
 ```
 
-Open the .xcworkspace that was created. This should be the file you use everyday to work within Xcode.
+Open the __**.xcworkspace**__ that was created. This should be the file you use everyday to work within Xcode.
