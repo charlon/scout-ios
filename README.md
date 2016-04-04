@@ -12,7 +12,7 @@ $ git clone https://github.com/charlon/scout-ios-turbolinks
 And then run
 ```
 $ cd scout-ios-turbolinks
-$ pod install --no-clean
+$ pod install
 ```
 
 Open the .xcworkspace that was created. This should be the file you use everyday to work within Xcode.
