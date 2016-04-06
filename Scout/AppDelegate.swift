@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    var navigationController = UINavigationController()
-    var session = Session()
+    //var navigationController = UINavigationController()
+    //var session = Session()
     
     // Set up the first View Controller
     var discoverNavigationController = UINavigationController()
@@ -57,23 +57,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    // old function
     func startApplication() {
-        session.delegate = self
         visitFood(NSURL(string: "http://curry.aca.uw.edu:8001/h/food/")!)
         visitDiscover(NSURL(string: "http://curry.aca.uw.edu:8001/h/")!)
     }
     
     func visitFood(URL: NSURL) {
+        foodSession.delegate = self
         let visitableViewController = VisitableViewController(URL: URL)
         foodNavigationController.pushViewController(visitableViewController, animated: true)
-        session.visit(visitableViewController)
+        foodSession.visit(visitableViewController)
     }
     
     func visitDiscover(URL: NSURL) {
+        discoverSession.delegate = self
         let visitableViewController = VisitableViewController(URL: URL)
         discoverNavigationController.pushViewController(visitableViewController, animated: true)
-        session.visit(visitableViewController)
+        discoverSession.visit(visitableViewController)
     }
     
 }
@@ -81,12 +81,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: SessionDelegate {
     
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
+        
+        // TODO: figure out how to call only one function at a time
+        
+        visitDiscover(URL)
         visitFood(URL)
+        
     }
     
     func session(session: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        
+        // TODO: figure out how to only return one controller at a time
+        
+        discoverNavigationController.presentViewController(alert, animated: true, completion: nil)
         foodNavigationController.presentViewController(alert, animated: true, completion: nil)
     }
 }
