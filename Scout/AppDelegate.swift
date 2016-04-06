@@ -13,66 +13,80 @@ import Turbolinks
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    //var navigationController = UINavigationController()
+    
+    var navigationController = UINavigationController()
     var session = Session()
     
     // Set up the first View Controller
-    var vc1 = UINavigationController()
+    var discoverNavigationController = UINavigationController()
+    var discoverSession = Session()
+    
     // Set up the second View Controller
-    var vc2 = UINavigationController()
+    var foodNavigationController = UINavigationController()
+    var foodSession = Session()
     
     var tabBarController = UITabBarController()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        // style the nav and tab bars
+        discoverNavigationController.view.backgroundColor = UIColor.orangeColor()
+        //discoverNavigationController.navigationBar.barTintColor = UIColor.greenColor()
+        discoverNavigationController.tabBarItem.title = "Discover"
+        discoverNavigationController.tabBarItem.image = UIImage(named: "heart")
         
-        vc1.view.backgroundColor = UIColor.orangeColor()
-        vc1.tabBarItem.title = "Orange"
-        vc1.tabBarItem.image = UIImage(named: "heart")
-        
-        vc2.view.backgroundColor = UIColor.purpleColor()
-        vc2.tabBarItem.title = "Purple"
-        vc2.tabBarItem.image = UIImage(named: "star")
+        foodNavigationController.view.backgroundColor = UIColor.purpleColor()
+        //foodNavigationController.navigationBar.barTintColor = UIColor.orangeColor()
+        foodNavigationController.tabBarItem.title = "Places"
+        foodNavigationController.tabBarItem.image = UIImage(named: "star")
         
         // Set up the Tab Bar Controller to have two tabs
-        
-        tabBarController.viewControllers = [vc1, vc2]
+        tabBarController.viewControllers = [discoverNavigationController, foodNavigationController]
         
         // Make the Tab Bar Controller the root view controller
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
-        
         // old rootview controller
         //window?.rootViewController = navigationController
+        
+        // TODO: figure out how to fire up correct  visitable view controllers based on which tab is clicked
         
         startApplication()
         
         return true
     }
     
+    // old function
     func startApplication() {
         session.delegate = self
-        visit(NSURL(string: "http://curry.aca.uw.edu:8001/h/")!)
+        visitFood(NSURL(string: "http://curry.aca.uw.edu:8001/h/food/")!)
+        visitDiscover(NSURL(string: "http://curry.aca.uw.edu:8001/h/")!)
     }
     
-    func visit(URL: NSURL) {
+    func visitFood(URL: NSURL) {
         let visitableViewController = VisitableViewController(URL: URL)
-        vc1.pushViewController(visitableViewController, animated: true)
+        foodNavigationController.pushViewController(visitableViewController, animated: true)
+        session.visit(visitableViewController)
+    }
+    
+    func visitDiscover(URL: NSURL) {
+        let visitableViewController = VisitableViewController(URL: URL)
+        discoverNavigationController.pushViewController(visitableViewController, animated: true)
         session.visit(visitableViewController)
     }
     
 }
 
-
 extension AppDelegate: SessionDelegate {
+    
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
-        visit(URL)
+        visitFood(URL)
     }
     
     func session(session: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        vc1.presentViewController(alert, animated: true, completion: nil)
+        foodNavigationController.presentViewController(alert, animated: true, completion: nil)
     }
 }
