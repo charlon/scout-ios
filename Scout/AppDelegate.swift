@@ -80,22 +80,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: SessionDelegate {
     
-    func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
+    func session(discoverSession: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
         
         // TODO: figure out how to call only one function at a time
         
         visitDiscover(URL)
-        visitFood(URL)
+        //visitFood(URL)
         
     }
     
-    func session(session: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
+    func session(discoverSession: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         
         // TODO: figure out how to only return one controller at a time
         
         discoverNavigationController.presentViewController(alert, animated: true, completion: nil)
-        foodNavigationController.presentViewController(alert, animated: true, completion: nil)
+        //foodNavigationController.presentViewController(alert, animated: true, completion: nil)
     }
 }
