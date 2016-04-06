@@ -16,9 +16,10 @@
 		8540345F1CB5AE5100C0C7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8540345D1CB5AE5100C0C7FD /* LaunchScreen.storyboard */; };
 		8540346A1CB5AE5100C0C7FD /* ScoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034691CB5AE5100C0C7FD /* ScoutTests.swift */; };
 		854034751CB5AE5100C0C7FD /* ScoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034741CB5AE5100C0C7FD /* ScoutUITests.swift */; };
-		854034841CB5B15B00C0C7FD /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034831CB5B15B00C0C7FD /* DemoViewController.swift */; };
 		854034861CB5B17F00C0C7FD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034851CB5B17F00C0C7FD /* Error.swift */; };
 		854034881CB5B1A100C0C7FD /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034871CB5B1A100C0C7FD /* ErrorView.swift */; };
+		854034931CB5BCE400C0C7FD /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854034911CB5BCE400C0C7FD /* pizza.png */; };
+		854034941CB5BCE400C0C7FD /* rooster.png in Resources */ = {isa = PBXBuildFile; fileRef = 854034921CB5BCE400C0C7FD /* rooster.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +56,10 @@
 		854034701CB5AE5100C0C7FD /* ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		854034741CB5AE5100C0C7FD /* ScoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutUITests.swift; sourceTree = "<group>"; };
 		854034761CB5AE5100C0C7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		854034831CB5B15B00C0C7FD /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		854034851CB5B17F00C0C7FD /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		854034871CB5B1A100C0C7FD /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		854034911CB5BCE400C0C7FD /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		854034921CB5BCE400C0C7FD /* rooster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooster.png; sourceTree = "<group>"; };
 		D6B30809CB58F10DC1F6644B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,10 +131,11 @@
 		854034511CB5AE5100C0C7FD /* Scout */ = {
 			isa = PBXGroup;
 			children = (
+				854034911CB5BCE400C0C7FD /* pizza.png */,
+				854034921CB5BCE400C0C7FD /* rooster.png */,
 				854034521CB5AE5100C0C7FD /* AppDelegate.swift */,
 				854034541CB5AE5100C0C7FD /* FirstViewController.swift */,
 				854034561CB5AE5100C0C7FD /* SecondViewController.swift */,
-				854034831CB5B15B00C0C7FD /* DemoViewController.swift */,
 				854034581CB5AE5100C0C7FD /* Main.storyboard */,
 				8540345B1CB5AE5100C0C7FD /* Assets.xcassets */,
 				8540345D1CB5AE5100C0C7FD /* LaunchScreen.storyboard */,
@@ -273,6 +276,8 @@
 			files = (
 				8540345F1CB5AE5100C0C7FD /* LaunchScreen.storyboard in Resources */,
 				8540345C1CB5AE5100C0C7FD /* Assets.xcassets in Resources */,
+				854034941CB5BCE400C0C7FD /* rooster.png in Resources */,
+				854034931CB5BCE400C0C7FD /* pizza.png in Resources */,
 				8540345A1CB5AE5100C0C7FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +356,6 @@
 				854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */,
 				854034551CB5AE5100C0C7FD /* FirstViewController.swift in Sources */,
 				854034861CB5B17F00C0C7FD /* Error.swift in Sources */,
-				854034841CB5B15B00C0C7FD /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
