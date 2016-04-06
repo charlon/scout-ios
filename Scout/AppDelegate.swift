@@ -2,100 +2,47 @@
 //  AppDelegate.swift
 //  Scout
 //
-//  Created by Charlon Palacay on 4/5/16.
+//  Created by Charlon Palacay on 4/6/16.
 //  Copyright © 2016 Charlon Palacay. All rights reserved.
 //
 
 import UIKit
+import WebKit
 import Turbolinks
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var window: UIWindow?
-    
-    //var navigationController = UINavigationController()
-    //var session = Session()
-    
-    // Set up the first View Controller
-    var discoverNavigationController = UINavigationController()
-    var discoverSession = Session()
-    
-    // Set up the second View Controller
-    var foodNavigationController = UINavigationController()
-    var foodSession = Session()
-    
-    var tabBarController = UITabBarController()
-    
+
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        // style the nav and tab bars
-        discoverNavigationController.view.backgroundColor = UIColor.orangeColor()
-        //discoverNavigationController.navigationBar.barTintColor = UIColor.greenColor()
-        discoverNavigationController.tabBarItem.title = "Discover"
-        discoverNavigationController.tabBarItem.image = UIImage(named: "heart")
-        
-        foodNavigationController.view.backgroundColor = UIColor.purpleColor()
-        //foodNavigationController.navigationBar.barTintColor = UIColor.orangeColor()
-        foodNavigationController.tabBarItem.title = "Places"
-        foodNavigationController.tabBarItem.image = UIImage(named: "star")
-        
-        // Set up the Tab Bar Controller to have two tabs
-        tabBarController.viewControllers = [discoverNavigationController, foodNavigationController]
-        
-        // Make the Tab Bar Controller the root view controller
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
-        
-        // old rootview controller
-        //window?.rootViewController = navigationController
-        
-        // TODO: figure out how to fire up correct  visitable view controllers based on which tab is clicked
-        
-        startApplication()
-        
+        // Override point for customization after application launch.
         return true
     }
-    
-    func startApplication() {
-        visitFood(NSURL(string: "http://curry.aca.uw.edu:8001/h/food/")!)
-        visitDiscover(NSURL(string: "http://curry.aca.uw.edu:8001/h/")!)
+
+    func applicationWillResignActive(application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
-    
-    func visitFood(URL: NSURL) {
-        foodSession.delegate = self
-        let visitableViewController = VisitableViewController(URL: URL)
-        foodNavigationController.pushViewController(visitableViewController, animated: true)
-        foodSession.visit(visitableViewController)
+
+    func applicationDidEnterBackground(application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-    
-    func visitDiscover(URL: NSURL) {
-        discoverSession.delegate = self
-        let visitableViewController = VisitableViewController(URL: URL)
-        discoverNavigationController.pushViewController(visitableViewController, animated: true)
-        discoverSession.visit(visitableViewController)
+
+    func applicationWillEnterForeground(application: UIApplication) {
+        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
-    
+
+    func applicationDidBecomeActive(application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillTerminate(application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+
 }
 
-extension AppDelegate: SessionDelegate {
-    
-    func session(discoverSession: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
-        
-        // TODO: figure out how to call only one function at a time
-        
-        visitDiscover(URL)
-        //visitFood(URL)
-        
-    }
-    
-    func session(discoverSession: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        
-        // TODO: figure out how to only return one controller at a time
-        
-        discoverNavigationController.presentViewController(alert, animated: true, completion: nil)
-        //foodNavigationController.presentViewController(alert, animated: true, completion: nil)
-    }
-}
