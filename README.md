@@ -11,7 +11,7 @@ $ git clone https://github.com/charlon/scout-ios-turbolinks
 ```
 And then run
 ```
-$ cd scout-ios-turbolinks
+$ cd scout-ios
 $ pod install
 ```
 
