@@ -12,7 +12,7 @@ import Turbolinks
 
 class SecondViewController: UINavigationController {
     
-    private let URL = NSURL(string: "http://scout-test.s.uw.edu/h/food/")!
+    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/food/")!
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
