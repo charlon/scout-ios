@@ -1,9 +1,11 @@
-## Installing Scout iOS
+## CocoaPods
 
 **Make sure [CocoaPods](http://cocoapods.org) is installed:**
 ```
 $ sudo gem install cocoapods
 ```
+
+## Installing Scout iOS
 
 Clone this repository
 ```
