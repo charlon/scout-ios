@@ -7,7 +7,7 @@ $ sudo gem install cocoapods
 
 Clone this repository
 ```
-$ git clone https://github.com/charlon/scout-ios-turbolinks
+$ git clone https://github.com/charlon/scout-ios
 ```
 And then run
 ```
