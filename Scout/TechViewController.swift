@@ -1,8 +1,8 @@
 //
-//  SecondViewController.swift
+//  TechViewController.swift
 //  Scout
 //
-//  Created by Charlon Palacay on 4/6/16.
+//  Created by Charlon Palacay on 7/14/16.
 //  Copyright © 2016 Charlon Palacay. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import UIKit
 import WebKit
 import Turbolinks
 
-class SecondViewController: UINavigationController {
+class TechViewController: UINavigationController {
     
-    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/study/")!
+    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/tech/")!
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
@@ -56,7 +56,7 @@ class SecondViewController: UINavigationController {
     
 }
 
-extension SecondViewController: SessionDelegate {
+extension TechViewController: SessionDelegate {
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
         if URL.path == "/numbers" {
             //presentNumbersViewController()
