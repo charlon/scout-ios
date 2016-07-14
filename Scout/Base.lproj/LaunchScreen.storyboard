@@ -10,31 +10,33 @@
             <objects>
                 <viewController modalPresentationStyle="currentContext" id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                        <viewControllerLayoutGuide type="top" id="65F-Qd-iEd"/>
+                        <viewControllerLayoutGuide type="bottom" id="V5d-7a-VFL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="ggm-bb-uoR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Charlon Palacay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8W6-kd-m5t">
-                                <rect key="frame" x="237" y="289" width="104" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Scout iOS" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7HX-jF-NZ6">
+                                <rect key="frame" x="219" y="279" width="163" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Scout iOS" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="c7U-QH-RYh">
-                                <rect key="frame" x="214" y="231" width="163" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="by Char" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96h-rC-And">
+                                <rect key="frame" x="192" y="329" width="216" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8W6-kd-m5t" firstAttribute="top" secondItem="c7U-QH-RYh" secondAttribute="bottom" constant="8" symbolic="YES" id="Tbi-WD-rrK"/>
-                            <constraint firstItem="8W6-kd-m5t" firstAttribute="centerX" secondItem="c7U-QH-RYh" secondAttribute="centerX" id="iG2-nP-rZE"/>
+                            <constraint firstItem="96h-rC-And" firstAttribute="centerX" secondItem="7HX-jF-NZ6" secondAttribute="centerX" id="MoQ-ST-6HY"/>
+                            <constraint firstItem="96h-rC-And" firstAttribute="top" secondItem="7HX-jF-NZ6" secondAttribute="bottom" constant="8" symbolic="YES" id="PLp-rH-DWS"/>
+                            <constraint firstAttribute="centerX" secondItem="7HX-jF-NZ6" secondAttribute="centerX" id="VSW-Rk-8U1"/>
+                            <constraint firstAttribute="centerY" secondItem="7HX-jF-NZ6" secondAttribute="centerY" id="vHT-6v-qdO"/>
                         </constraints>
                     </view>
                 </viewController>
