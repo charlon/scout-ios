@@ -39,11 +39,30 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Food" image="pizza.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Food" image="fork-knife.png" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1954" y="1050"/>
+            <point key="canvasLocation" x="-2002" y="1050"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="bYg-cc-SY2">
+            <objects>
+                <viewController id="EC8-27-AhA" customClass="DiscoverViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r7Y-Uv-DTT"/>
+                        <viewControllerLayoutGuide type="bottom" id="AKi-vi-KAj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdx-2Y-JWC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="vB9-D9-Nh2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYo-Xj-393" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2674" y="1050"/>
         </scene>
         <!--Study-->
         <scene sceneID="wg7-f3-ORb">
@@ -79,11 +98,11 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Study" image="rooster.png" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Study" image="graduation-cap.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266" y="1050"/>
+            <point key="canvasLocation" x="-1324" y="1050"/>
         </scene>
         <!--Tech-->
         <scene sceneID="xwp-NV-DJi">
@@ -98,16 +117,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tech" image="first" id="eqj-At-Khf"/>
+                    <tabBarItem key="tabBarItem" title="Tech" image="monitor.png" id="eqj-At-Khf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1S-GY-RWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="1050"/>
+            <point key="canvasLocation" x="-660" y="1050"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6pR-Ay-uwz"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -115,6 +135,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="EC8-27-AhA" kind="relationship" relationship="viewControllers" id="qar-en-5m2"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="IJ0-yC-9Cq" kind="relationship" relationship="viewControllers" id="CgK-K8-iq6"/>
@@ -122,12 +143,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266" y="19"/>
+            <point key="canvasLocation" x="-1633" y="-96"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="pizza.png" width="30" height="30"/>
-        <image name="rooster.png" width="30" height="30"/>
+        <image name="fork-knife.png" width="30" height="30"/>
+        <image name="graduation-cap.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="monitor.png" width="30" height="30"/>
     </resources>
 </document>

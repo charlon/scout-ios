@@ -23,6 +23,11 @@
 		854034931CB5BCE400C0C7FD /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854034911CB5BCE400C0C7FD /* pizza.png */; };
 		854034941CB5BCE400C0C7FD /* rooster.png in Resources */ = {isa = PBXBuildFile; fileRef = 854034921CB5BCE400C0C7FD /* rooster.png */; };
 		8572A33A1D38169300D80248 /* TechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572A3391D38169300D80248 /* TechViewController.swift */; };
+		8572A33C1D382F0500D80248 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572A33B1D382F0500D80248 /* DiscoverViewController.swift */; };
+		8572A33E1D38335300D80248 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A33D1D38335300D80248 /* home.png */; };
+		8572A3401D3833E700D80248 /* fork-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A33F1D3833E700D80248 /* fork-knife.png */; };
+		8572A3421D38352700D80248 /* graduation-cap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A3411D38352700D80248 /* graduation-cap.png */; };
+		8572A3441D38354800D80248 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A3431D38354800D80248 /* monitor.png */; };
 		AB768494301726712C45D161 /* Pods_ScoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF05F6576FC46B508E0B5A1 /* Pods_ScoutUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +71,11 @@
 		854034911CB5BCE400C0C7FD /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
 		854034921CB5BCE400C0C7FD /* rooster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooster.png; sourceTree = "<group>"; };
 		8572A3391D38169300D80248 /* TechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechViewController.swift; sourceTree = "<group>"; };
+		8572A33B1D382F0500D80248 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		8572A33D1D38335300D80248 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		8572A33F1D3833E700D80248 /* fork-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fork-knife.png"; sourceTree = "<group>"; };
+		8572A3411D38352700D80248 /* graduation-cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graduation-cap.png"; sourceTree = "<group>"; };
+		8572A3431D38354800D80248 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
 		8DB51F82795F55BA7760354E /* Pods-Scout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scout/Pods-Scout.release.xcconfig"; sourceTree = "<group>"; };
 		A057CD7AF6DA4B261A4AF0A5 /* Pods_ScoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02436FEE352D4935B513B76 /* Pods-ScoutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutUITests/Pods-ScoutUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,9 +150,14 @@
 		854034511CB5AE5100C0C7FD /* Scout */ = {
 			isa = PBXGroup;
 			children = (
+				8572A3431D38354800D80248 /* monitor.png */,
+				8572A3411D38352700D80248 /* graduation-cap.png */,
+				8572A33F1D3833E700D80248 /* fork-knife.png */,
+				8572A33D1D38335300D80248 /* home.png */,
 				854034911CB5BCE400C0C7FD /* pizza.png */,
 				854034921CB5BCE400C0C7FD /* rooster.png */,
 				854034521CB5AE5100C0C7FD /* AppDelegate.swift */,
+				8572A33B1D382F0500D80248 /* DiscoverViewController.swift */,
 				854034541CB5AE5100C0C7FD /* FirstViewController.swift */,
 				854034561CB5AE5100C0C7FD /* SecondViewController.swift */,
 				8572A3391D38169300D80248 /* TechViewController.swift */,
@@ -307,6 +322,10 @@
 			files = (
 				8540345F1CB5AE5100C0C7FD /* LaunchScreen.storyboard in Resources */,
 				8540345C1CB5AE5100C0C7FD /* Assets.xcassets in Resources */,
+				8572A3401D3833E700D80248 /* fork-knife.png in Resources */,
+				8572A3441D38354800D80248 /* monitor.png in Resources */,
+				8572A33E1D38335300D80248 /* home.png in Resources */,
+				8572A3421D38352700D80248 /* graduation-cap.png in Resources */,
 				854034941CB5BCE400C0C7FD /* rooster.png in Resources */,
 				854034931CB5BCE400C0C7FD /* pizza.png in Resources */,
 				8540345A1CB5AE5100C0C7FD /* Main.storyboard in Resources */,
@@ -504,6 +523,7 @@
 			files = (
 				8572A33A1D38169300D80248 /* TechViewController.swift in Sources */,
 				854034571CB5AE5100C0C7FD /* SecondViewController.swift in Sources */,
+				8572A33C1D382F0500D80248 /* DiscoverViewController.swift in Sources */,
 				854034881CB5B1A100C0C7FD /* ErrorView.swift in Sources */,
 				854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */,
 				854034551CB5AE5100C0C7FD /* FirstViewController.swift in Sources */,
