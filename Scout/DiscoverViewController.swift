@@ -12,7 +12,9 @@ import Turbolinks
 
 class DiscoverViewController: UINavigationController {
     
-    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/")!
+    //private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/")!
+    private let URL = NSURL(string: "http://curry.aca.uw.edu:8001/h/")!
+   
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {

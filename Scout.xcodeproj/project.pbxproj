@@ -11,8 +11,8 @@
 		36C8BDAFDED15688245BD5A7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FB1F52AE24A38BEB7631F3 /* Pods.framework */; };
 		5C1D706F833FC8BFEEFD1B8A /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A057CD7AF6DA4B261A4AF0A5 /* Pods_ScoutTests.framework */; };
 		854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034521CB5AE5100C0C7FD /* AppDelegate.swift */; };
-		854034551CB5AE5100C0C7FD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034541CB5AE5100C0C7FD /* FirstViewController.swift */; };
-		854034571CB5AE5100C0C7FD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034561CB5AE5100C0C7FD /* SecondViewController.swift */; };
+		854034551CB5AE5100C0C7FD /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034541CB5AE5100C0C7FD /* FoodViewController.swift */; };
+		854034571CB5AE5100C0C7FD /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034561CB5AE5100C0C7FD /* StudyViewController.swift */; };
 		8540345A1CB5AE5100C0C7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854034581CB5AE5100C0C7FD /* Main.storyboard */; };
 		8540345C1CB5AE5100C0C7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8540345B1CB5AE5100C0C7FD /* Assets.xcassets */; };
 		8540345F1CB5AE5100C0C7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8540345D1CB5AE5100C0C7FD /* LaunchScreen.storyboard */; };
@@ -54,8 +54,8 @@
 		70BDFF87E4B9BEC0E024FA3B /* Pods_Scout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8540344F1CB5AE5100C0C7FD /* Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854034521CB5AE5100C0C7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		854034541CB5AE5100C0C7FD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		854034561CB5AE5100C0C7FD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		854034541CB5AE5100C0C7FD /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		854034561CB5AE5100C0C7FD /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 		854034591CB5AE5100C0C7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8540345B1CB5AE5100C0C7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8540345E1CB5AE5100C0C7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 				854034921CB5BCE400C0C7FD /* rooster.png */,
 				854034521CB5AE5100C0C7FD /* AppDelegate.swift */,
 				8572A33B1D382F0500D80248 /* DiscoverViewController.swift */,
-				854034541CB5AE5100C0C7FD /* FirstViewController.swift */,
-				854034561CB5AE5100C0C7FD /* SecondViewController.swift */,
+				854034541CB5AE5100C0C7FD /* FoodViewController.swift */,
+				854034561CB5AE5100C0C7FD /* StudyViewController.swift */,
 				8572A3391D38169300D80248 /* TechViewController.swift */,
 				854034581CB5AE5100C0C7FD /* Main.storyboard */,
 				8540345B1CB5AE5100C0C7FD /* Assets.xcassets */,
@@ -522,11 +522,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8572A33A1D38169300D80248 /* TechViewController.swift in Sources */,
-				854034571CB5AE5100C0C7FD /* SecondViewController.swift in Sources */,
+				854034571CB5AE5100C0C7FD /* StudyViewController.swift in Sources */,
 				8572A33C1D382F0500D80248 /* DiscoverViewController.swift in Sources */,
 				854034881CB5B1A100C0C7FD /* ErrorView.swift in Sources */,
 				854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */,
-				854034551CB5AE5100C0C7FD /* FirstViewController.swift in Sources */,
+				854034551CB5AE5100C0C7FD /* FoodViewController.swift in Sources */,
 				854034861CB5B17F00C0C7FD /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +670,7 @@
 			baseConfigurationReference = E55B85EE469A122A2B0D3245 /* Pods-Scout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Scout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.Scout";
@@ -682,6 +683,7 @@
 			baseConfigurationReference = 8DB51F82795F55BA7760354E /* Pods-Scout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Scout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "UWIT-ACA.Scout";

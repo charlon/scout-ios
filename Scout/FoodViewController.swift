@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FoodViewController.swift
 //  Scout
 //
 //  Created by Charlon Palacay on 4/6/16.
@@ -10,9 +10,11 @@ import UIKit
 import WebKit
 import Turbolinks
 
-class SecondViewController: UINavigationController {
+class FoodViewController: UINavigationController {
     
-    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/study/")!
+    //private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/food/")!
+    private let URL = NSURL(string: "http://curry.aca.uw.edu:8001/h/food/")!
+    
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
@@ -40,7 +42,7 @@ class SecondViewController: UINavigationController {
         
         presentVisitableForSession(session, URL: URL)
     }
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,16 +51,23 @@ class SecondViewController: UINavigationController {
     
     private func presentVisitableForSession(session: Session, URL: NSURL, action: Action = .Advance) {
         let visitable = VisitableViewController(URL: URL)
-        pushViewController(visitable, animated: true)
+        
+        if action == .Advance {
+            pushViewController(visitable, animated: true)
+        } else if action == .Replace {
+            popViewControllerAnimated(true)
+            pushViewController(visitable, animated: false)
+        }
+        
         session.visit(visitable)
     }
-    
-    
+
+
 }
 
-extension SecondViewController: SessionDelegate {
+extension FoodViewController: SessionDelegate {
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
-        if URL.path == "/numbers" {
+        if URL.path == "/h/food/filter/" {
             //presentNumbersViewController()
         } else {
             presentVisitableForSession(session, URL: URL, action: action)
@@ -66,7 +75,7 @@ extension SecondViewController: SessionDelegate {
     }
     
     func session(session: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
-        
+  
     }
     
     func sessionDidStartRequest(session: Session) {

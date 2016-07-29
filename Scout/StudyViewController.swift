@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  StudyViewController.swift
 //  Scout
 //
 //  Created by Charlon Palacay on 4/6/16.
@@ -10,9 +10,11 @@ import UIKit
 import WebKit
 import Turbolinks
 
-class FirstViewController: UINavigationController {
+class StudyViewController: UINavigationController {
     
-    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/food/")!
+    //private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/study/")!
+    private let URL = NSURL(string: "http://curry.aca.uw.edu:8001/h/study/")!
+    
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
@@ -40,7 +42,7 @@ class FirstViewController: UINavigationController {
         
         presentVisitableForSession(session, URL: URL)
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,11 +54,11 @@ class FirstViewController: UINavigationController {
         pushViewController(visitable, animated: true)
         session.visit(visitable)
     }
-
-
+    
+    
 }
 
-extension FirstViewController: SessionDelegate {
+extension StudyViewController: SessionDelegate {
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
         if URL.path == "/numbers" {
             //presentNumbersViewController()
@@ -66,7 +68,7 @@ extension FirstViewController: SessionDelegate {
     }
     
     func session(session: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
-  
+        
     }
     
     func sessionDidStartRequest(session: Session) {
