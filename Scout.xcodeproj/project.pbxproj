@@ -26,6 +26,7 @@
 		8572A3401D3833E700D80248 /* fork-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A33F1D3833E700D80248 /* fork-knife.png */; };
 		8572A3421D38352700D80248 /* graduation-cap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A3411D38352700D80248 /* graduation-cap.png */; };
 		8572A3441D38354800D80248 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8572A3431D38354800D80248 /* monitor.png */; };
+		8573B5E31D4C655C00319CA0 /* FoodFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573B5E21D4C655C00319CA0 /* FoodFilterViewController.swift */; };
 		9918D7490F222B7DC53403FF /* Pods_Scout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5D9898AB310A8F0A733F0 /* Pods_Scout.framework */; };
 		D06534E63FA8821C23147FAC /* Pods_ScoutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DB4DED67CE6D4F3C09FC35 /* Pods_ScoutUITests.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		8572A33F1D3833E700D80248 /* fork-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fork-knife.png"; sourceTree = "<group>"; };
 		8572A3411D38352700D80248 /* graduation-cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graduation-cap.png"; sourceTree = "<group>"; };
 		8572A3431D38354800D80248 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
+		8573B5E21D4C655C00319CA0 /* FoodFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodFilterViewController.swift; sourceTree = "<group>"; };
 		944C94A4FF5B973E65E5EF09 /* Pods-ScoutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScoutUITests/Pods-ScoutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				854034521CB5AE5100C0C7FD /* AppDelegate.swift */,
 				8572A33B1D382F0500D80248 /* DiscoverViewController.swift */,
 				854034541CB5AE5100C0C7FD /* FoodViewController.swift */,
+				8573B5E21D4C655C00319CA0 /* FoodFilterViewController.swift */,
 				854034561CB5AE5100C0C7FD /* StudyViewController.swift */,
 				8572A3391D38169300D80248 /* TechViewController.swift */,
 				854034581CB5AE5100C0C7FD /* Main.storyboard */,
@@ -477,6 +480,7 @@
 				854034881CB5B1A100C0C7FD /* ErrorView.swift in Sources */,
 				854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */,
 				854034551CB5AE5100C0C7FD /* FoodViewController.swift in Sources */,
+				8573B5E31D4C655C00319CA0 /* FoodFilterViewController.swift in Sources */,
 				854034861CB5B17F00C0C7FD /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

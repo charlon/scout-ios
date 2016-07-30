@@ -34,10 +34,7 @@ class FoodViewController: UINavigationController {
     }()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         presentVisitableForSession(session, URL: URL)
     }
 
@@ -55,9 +52,28 @@ class FoodViewController: UINavigationController {
         } else if action == .Replace {
             popViewControllerAnimated(true)
             pushViewController(visitable, animated: false)
+            //TODO: try doing a slide up instead...
+            //presentViewController(authNavigationController, animated: true, completion: nil)
         }
         
         session.visit(visitable)
+    }
+    
+    private func presentFoodFilterViewController() {
+        //TODO 1: slide this new controller from the bottom (present.. not push)
+        //let viewController = FoodFilterViewController()
+        //presentViewController(viewController, animated: true, completion: nil)
+        
+        // TODO 2: trying similar to auth controller example
+        let authenticationController = FoodFilterViewController()
+        //authenticationController.delegate = self
+        authenticationController.webViewConfiguration = webViewConfiguration
+        authenticationController.URL = URL.URLByAppendingPathComponent("filter")
+        authenticationController.title = "Filter Food"
+        
+        let authNavigationController = UINavigationController(rootViewController: authenticationController)
+        presentViewController(authNavigationController, animated: true, completion: nil)
+        
     }
 
 
@@ -65,8 +81,8 @@ class FoodViewController: UINavigationController {
 
 extension FoodViewController: SessionDelegate {
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
-        if URL.path == "/h/food/filter/" {
-            //presentNumbersViewController()
+        if URL.path == "/h/food/filter" {
+            presentFoodFilterViewController()
         } else {
             presentVisitableForSession(session, URL: URL, action: action)
         }
