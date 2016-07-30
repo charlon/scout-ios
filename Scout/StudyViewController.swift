@@ -12,9 +12,7 @@ import Turbolinks
 
 class StudyViewController: UINavigationController {
     
-    //private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/study/")!
-    private let URL = NSURL(string: "http://curry.aca.uw.edu:8001/h/study/")!
-    
+    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/study/")!
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
