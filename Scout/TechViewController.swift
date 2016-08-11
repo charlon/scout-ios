@@ -12,7 +12,7 @@ import Turbolinks
 
 class TechViewController: UINavigationController {
     
-    private let URL = NSURL(string: "https://scout-test.s.uw.edu/h/tech/")!    
+    private let URL = NSURL(string: "http://curry.aca.uw.edu:8001/h/tech/")!
     private let webViewProcessPool = WKProcessPool()
     
     private var application: UIApplication {
