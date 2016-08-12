@@ -10,6 +10,8 @@ import UIKit
 import WebKit
 import Turbolinks
 
+let host = "http://curry.aca.uw.edu:8001/h"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

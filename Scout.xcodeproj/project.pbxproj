@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AED9C5C03F1465562DD2597 /* Pods_ScoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFA728C596F860C5CECE502 /* Pods_ScoutTests.framework */; };
+		851B190F1D5DA7AC0061B30D /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B190E1D5DA7AC0061B30D /* ApplicationViewController.swift */; };
 		854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034521CB5AE5100C0C7FD /* AppDelegate.swift */; };
 		854034551CB5AE5100C0C7FD /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034541CB5AE5100C0C7FD /* FoodViewController.swift */; };
 		854034571CB5AE5100C0C7FD /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854034561CB5AE5100C0C7FD /* StudyViewController.swift */; };
@@ -58,6 +59,7 @@
 		64FB1F52AE24A38BEB7631F3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE89911EB79A452FF3FB323 /* Pods-Scout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scout/Pods-Scout.debug.xcconfig"; sourceTree = "<group>"; };
 		74F5D9898AB310A8F0A733F0 /* Pods_Scout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851B190E1D5DA7AC0061B30D /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		8540344F1CB5AE5100C0C7FD /* Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854034521CB5AE5100C0C7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		854034541CB5AE5100C0C7FD /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				854034911CB5BCE400C0C7FD /* pizza.png */,
 				854034921CB5BCE400C0C7FD /* rooster.png */,
 				854034521CB5AE5100C0C7FD /* AppDelegate.swift */,
+				851B190E1D5DA7AC0061B30D /* ApplicationViewController.swift */,
 				8572A33B1D382F0500D80248 /* DiscoverViewController.swift */,
 				854034541CB5AE5100C0C7FD /* FoodViewController.swift */,
 				8573B5E21D4C655C00319CA0 /* FoodFilterViewController.swift */,
@@ -476,6 +479,7 @@
 			files = (
 				8572A33A1D38169300D80248 /* TechViewController.swift in Sources */,
 				854034571CB5AE5100C0C7FD /* StudyViewController.swift in Sources */,
+				851B190F1D5DA7AC0061B30D /* ApplicationViewController.swift in Sources */,
 				8572A33C1D382F0500D80248 /* DiscoverViewController.swift in Sources */,
 				854034881CB5B1A100C0C7FD /* ErrorView.swift in Sources */,
 				854034531CB5AE5100C0C7FD /* AppDelegate.swift in Sources */,
