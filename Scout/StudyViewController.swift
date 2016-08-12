@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudyViewController: ApplicationViewController {
+class StudyViewController: ApplicationController {
     
     override var URL: NSURL {
         return NSURL(string: "\(host)/study/")!

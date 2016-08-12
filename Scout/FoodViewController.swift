@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodViewController: ApplicationViewController {
+class FoodViewController: ApplicationController {
     
     override var URL: NSURL {
         return NSURL(string: "\(host)/food/")!

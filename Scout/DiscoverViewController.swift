@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscoverViewController: ApplicationViewController {
+class DiscoverViewController: ApplicationController {
     
     override var URL: NSURL {
         return NSURL(string: "\(host)/")!

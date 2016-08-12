@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TechViewController: ApplicationViewController {
+class TechViewController: ApplicationController {
     
     override var URL: NSURL {
         return NSURL(string: "\(host)/tech/")!

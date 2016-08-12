@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import Turbolinks
 
-class ApplicationViewController: UINavigationController {
+class ApplicationController: UINavigationController {
     
     var URL: NSURL {
         return NSURL(string: "\(host)/")!
@@ -65,7 +65,7 @@ class ApplicationViewController: UINavigationController {
     
 }
 
-extension ApplicationViewController: SessionDelegate {
+extension ApplicationController: SessionDelegate {
     func session(session: Session, didProposeVisitToURL URL: NSURL, withAction action: Action) {
         
         if URL.path == "/h/food/filterxxx" {
